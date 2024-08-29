@@ -1,5 +1,5 @@
 export interface IAnimals {
-    Name: string;
-    ImageUrl: string;
+    name: string;
+    imageUrl: string;
     id: string;
 }

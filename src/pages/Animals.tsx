@@ -1,19 +1,27 @@
 import { useLoaderData } from "react-router-dom";
 import { IAnimals } from "../models/IAnimals";
 
+
 export const Animals = () => {
     const animals = useLoaderData() as IAnimals[];
 
     return (
         <>
-            <h1>Djuren</h1>
-            <section>
-                {animals.map((animal) => (
-                    <div key={animal.id}>
-                        <h2>{animal.Name}</h2>
-                        <img src={animal.ImageUrl} alt={animal.Name} />
-                    </div>
-                ))}
+            
+            <section className="main-container">
+                <h1>Djuren</h1>
+                <article className="animals-display">
+                    {animals.map((animal) => (
+                        <div key={animal.id}>
+                            <h2>{animal.name}</h2>
+                            <img
+                                src={animal.imageUrl} 
+                                alt={animal.name}
+                                className="animal-image"
+                                />
+                        </div>
+                    ))}
+                </article>
             </section>
         </>
     );

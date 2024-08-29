@@ -1,7 +1,7 @@
 export interface IAnimalsExt {
-    Name: string;
-    LatinName: string;
-    ImageUrl: string;
-    LongDescription: string;
+    name: string;
+    latinName: string;
+    imageUrl: string;
+    longDescription: string;
     id: string;
 }

@@ -10,3 +10,4 @@ export const animalsLoader = async (): Promise<IAnimals[]> => {
     const result: IAnimals[] = await response.json();
     return result;
 };
+animalsLoader();

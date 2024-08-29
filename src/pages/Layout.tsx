@@ -3,6 +3,7 @@ import { NavLink, Outlet } from "react-router-dom"
 export const Layout = () => {
     return <>
         <header>
+            <h1>The Zoo</h1>
             <nav>
             <ul>
                 <li>
