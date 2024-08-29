@@ -1,7 +1,9 @@
 export const NotFound = () => {
     return (
         <>
-        <h2>Ooops, nu har du kommit fel!</h2>
+        <section className="not-found-container">
+            <h1 className="not-found">Ooops, nu har du kommit fel!</h1>
+        </section>
         </>
 
     )

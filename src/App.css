@@ -70,9 +70,26 @@ a:hover {
   gap: 20px; 
   padding: 5px;
 }
+.animal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 350px;
+  background-color: pink;
+}
 .animal-image {
   width: 250px;
   display: block;
+}
+.not-found-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.not-found {
+  text-align: center;
+  width: 100vw;
 }
 /*
 @keyframes logo-spin {

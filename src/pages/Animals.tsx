@@ -12,7 +12,7 @@ export const Animals = () => {
                 <h1>Djuren</h1>
                 <article className="animals-display">
                     {animals.map((animal) => (
-                        <div key={animal.id}>
+                        <div className="animal-container" key={animal.id}>
                             <h2>{animal.name}</h2>
                             <img
                                 src={animal.imageUrl} 
