@@ -70,16 +70,33 @@ a:hover {
   gap: 20px; 
   padding: 5px;
 }
-.animal-container {
+.animals-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 350px;
   background-color: pink;
 }
+.animal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 350px;
+
+}
 .animal-image {
   width: 250px;
   display: block;
+}
+.animal-image-bigger {
+  width: 350px;
+  display: block;
+}
+.animal-info {
+  padding-top: 20px;
+  width: 450px;
+  font-size: 1.3rem;
+  padding-bottom: 20px;
 }
 .not-found-container {
   display: flex;
