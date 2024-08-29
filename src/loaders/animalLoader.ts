@@ -1,6 +1,6 @@
 import { IAnimals } from "../models/IAnimals";
 
-export const animalLoader = async (): Promise<IAnimals[]> => {
+export const animalsLoader = async (): Promise<IAnimals[]> => {
     const response = await fetch("https://animals.azurewebsites.net/api/animals");
     
     if (!response.ok) {
