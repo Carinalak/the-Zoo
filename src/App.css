@@ -85,8 +85,10 @@ a:hover {
 
 }
 .animal-image {
-  width: 250px;
-  display: block;
+  max-width: 250px; 
+  height: auto;
+  max-height: 250px;
+ 
 }
 .animal-image-bigger {
   width: 350px;
