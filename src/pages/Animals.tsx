@@ -1,6 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { IAnimals } from "../models/IAnimals";
-import { handleImageError } from "./Placeholder";
+import { handleImageError } from "../assets/components/Placeholder";
 
 export const Animals = () => {
     const animals = useLoaderData() as IAnimals[];
