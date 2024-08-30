@@ -7,6 +7,7 @@ import { NotFound } from "./pages/NotFound";
 import { Animal } from "./pages/Animal";
 import { Suspense } from "react";
 import { Spinner } from "./assets/components/Spinner";
+import { feedAnimalLoader } from "./loaders/feedAnimalLoader";
 
 
 export const router = createBrowserRouter([
@@ -28,7 +29,11 @@ export const router = createBrowserRouter([
                 path: "/animal/:id",
                 element: <Animal></Animal>,
                 loader: animalLoader,
-            }
+            },
+            {
+                path: "/feed-animal/:id",
+                loader: feedAnimalLoader,
+            },
         ],
     },
 ]);

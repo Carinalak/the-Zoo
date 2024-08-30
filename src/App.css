@@ -57,7 +57,6 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid red;
 }
 .home-display {
   display: flex;
@@ -82,9 +81,6 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 350px;
-  border: 1px solid blue;
-
 }
 .animal-image {
   max-width: 250px; 

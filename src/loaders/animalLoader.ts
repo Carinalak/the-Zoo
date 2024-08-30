@@ -3,6 +3,7 @@ import { IAnimals } from "../models/IAnimals";
 import { IAnimalsExt } from "../models/IAnimalsExt";
 
 // --------------------------------- Alla djur ------------------------------- //
+
 export const animalsLoader = async (): Promise<IAnimals[]> => {
         const storedAnimals = localStorage.getItem("animalsData");
 

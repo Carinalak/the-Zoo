@@ -4,4 +4,6 @@ export interface IAnimalsExt {
     imageUrl: string;
     longDescription: string;
     id: string;
+    isFed: boolean;
+    lastFed: string;
 }
