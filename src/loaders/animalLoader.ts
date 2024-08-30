@@ -4,6 +4,7 @@ import { IAnimalsExt } from "../models/IAnimalsExt";
 
 export const animalsLoader = async (): Promise<IAnimals[]> => {
     const response = await fetch("https://animals.azurewebsites.net/api/animals");
+    //await new Promise((resolve) => setTimeout(resolve, 2700));
     
     if (!response.ok) {
         throw new Error("Failed to fetch animals");
@@ -12,7 +13,6 @@ export const animalsLoader = async (): Promise<IAnimals[]> => {
     const result: IAnimals[] = await response.json();
     return result;
 };
-animalsLoader();
 
 
 interface IAnimalLoader {
