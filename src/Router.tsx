@@ -27,7 +27,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/animal/:id",
-                element: <Animal></Animal>,
+                element: <Suspense fallback={<Spinner></Spinner>}><Animal></Animal></Suspense>,
                 loader: animalLoader,
             },
             {

@@ -55,19 +55,4 @@ export const animalLoader = async ({ params }: IAnimalLoader): Promise<IAnimalsE
 };
 
 
-/*
-export const animalLoader = async ({params}: IAnimalLoader) => {
-
-    const response = await fetch("https://animals.azurewebsites.net/api/animals/" + params.id);
-
-    if (!response.ok) {
-        throw new Error("Failed to fetch animal");
-    }
-
-    const result: IAnimalsExt = await response.json();
-
-    return result;
-};
-*/
-
 
