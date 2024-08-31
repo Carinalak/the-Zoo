@@ -70,36 +70,18 @@ a:hover {
   gap: 20px; 
   padding: 5px;
 }
+
 .animals-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 350px;
+  height: 400px;
+  width: 300px;
+  border-radius: 10px;
   background-color: pink;
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
+  padding: 10px;
 }
-.animal-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.animal-image {
-  max-width: 250px; 
-  height: auto;
-  max-height: 250px;
- 
-}
-.animal-image-bigger {
-  width: 350px;
-  display: block;
-}
-.animal-info {
-  padding-top: 20px;
-  width: 450px;
-  font-size: 1.3rem;
-  padding-bottom: 20px;
-}
-
-
 .fed-recently {
   background-color: rgb(134, 245, 134);
 }
@@ -111,7 +93,43 @@ a:hover {
 .fed-four-hours {
   background-color: pink;
 }
-
+.hungry-warning {
+  background-color: whitesmoke;
+  width: 150px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  margin-top: auto;
+}
+.animal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.animal-image {
+  max-width: 250px; 
+  height: auto;
+  max-height: 250px;
+  border-radius: 10px;
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
+ 
+}
+.animal-image-bigger {
+  width: 350px;
+  display: block;
+  border-radius: 10px;
+  
+}
+.animal-info {
+  padding-top: 20px;
+  width: 450px;
+  font-size: 1.3rem;
+  padding-bottom: 20px;
+}
 
 .not-found-container {
   display: flex;
