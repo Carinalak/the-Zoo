@@ -98,6 +98,21 @@ a:hover {
   font-size: 1.3rem;
   padding-bottom: 20px;
 }
+
+
+.fed-recently {
+  background-color: rgb(134, 245, 134);
+}
+
+.fed-three-hours {
+  background-color: rgb(252, 252, 137); 
+}
+
+.fed-four-hours {
+  background-color: pink;
+}
+
+
 .not-found-container {
   display: flex;
   flex-direction: row;

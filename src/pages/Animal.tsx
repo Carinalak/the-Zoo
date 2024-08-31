@@ -4,7 +4,7 @@ import { handleImageError } from "../assets/components/Placeholder";
 
 const formatDateToLocal = (isoDate: string) => {
     const date = new Date(isoDate);
-    return date.toLocaleString(undefined, { // Använder undefined för att använda datorns lokala inställningar
+    return date.toLocaleString(undefined, {
         year: "numeric",
         month: "2-digit",
         day: "2-digit",
@@ -13,8 +13,6 @@ const formatDateToLocal = (isoDate: string) => {
         hour12: false
     }).replace(" ", ", ");
 };
-
-
 
 export const Animal = () => {
     const animal = useLoaderData() as IAnimalsExt;

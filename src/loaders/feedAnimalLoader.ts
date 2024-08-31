@@ -30,3 +30,5 @@ export const feedAnimalLoader = async ({ params }: IFeedAnimalLoader): Promise<v
         localStorage.setItem(`lastFed-${animalId}`, currentDateTime);
     }
 };
+
+
