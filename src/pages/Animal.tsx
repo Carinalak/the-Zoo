@@ -2,6 +2,20 @@ import { useFetcher, useLoaderData } from "react-router-dom";
 import { IAnimalsExt } from "../models/IAnimalsExt";
 import { handleImageError } from "../assets/components/Placeholder";
 
+const formatDateToLocal = (isoDate: string) => {
+    const date = new Date(isoDate);
+    return date.toLocaleString(undefined, { // Använder undefined för att använda datorns lokala inställningar
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false
+    }).replace(" ", ", ");
+};
+
+
+
 export const Animal = () => {
     const animal = useLoaderData() as IAnimalsExt;
     const fetcher = useFetcher();
@@ -52,7 +66,7 @@ export const Animal = () => {
             <section className="main-container">
                 {animal.lastFed && (
                     <div>
-                        <p>Senast matad: {animal.lastFed}</p>
+                        <p>Senast matad: {formatDateToLocal(animal.lastFed)}</p>
                     </div>
                 )}
                 <button onClick={handleFeedAnimal} disabled={isButtonDisabled && false}>
