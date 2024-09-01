@@ -2,23 +2,8 @@ import { Link, useLoaderData } from "react-router-dom";
 import { IAnimals } from "../models/IAnimals";
 import { handleImageError } from "../assets/components/Placeholder";
 import { getHungryWarning } from "../helpers/animalHelpers";
+import { getBackgroundColorClass } from "../services/changeColorService";
 
-
-const getBackgroundColorClass = (lastFed: string | null) => {
-    if (!lastFed) return "";
-
-    const lastFedTime = new Date(lastFed).getTime();
-    const currentTime = new Date().getTime();
-    const hoursSinceFed = (currentTime - lastFedTime) / (1000 * 60 * 60);
-
-    if (hoursSinceFed < 3) {
-        return "fed-recently"; 
-    } else if (hoursSinceFed >= 3 && hoursSinceFed < 4) {
-        return "fed-three-hours";
-    } else {
-        return "fed-four-hours";
-    }
-};
 
 export const Animals = () => {
     const animals = useLoaderData() as IAnimals[];
