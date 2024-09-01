@@ -27,14 +27,15 @@ main {
   height: 100vh;
 }
 
-header {
+.navigation-container {
   display: flex;
   flex-direction: row;
-  background-color: pink;
   width: 100vw; 
   justify-content: space-around;
   align-items: center;
+  border: 1px solid black;
 }
+
 
 ul {
   margin: 0px;
@@ -45,13 +46,13 @@ ul {
   gap: 10px;
 }
 li a {
-  font-weight: 600;
-  font-size: 1.3rem;
+  font-weight: 700;
+  font-size: 1.4rem;
   color: #b12b7b;
   text-decoration: inherit;
 }
-a:hover {
-  color: #041c39;
+li a:hover {
+  color: pink;
 }
 .main-container {
   display: flex;
@@ -75,7 +76,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 400px;
+  height: 350px;
   width: 300px;
   border-radius: 10px;
   background-color: pink;
@@ -113,7 +114,7 @@ a:hover {
 .animal-image {
   max-width: 250px; 
   height: auto;
-  max-height: 250px;
+  max-height: 220px;
   border-radius: 10px;
   filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
  
