@@ -1,22 +1,13 @@
 import { useFetcher, useLoaderData } from "react-router-dom";
 import { IAnimalsExt } from "../models/IAnimalsExt";
 import { handleImageError } from "../assets/components/Placeholder";
+import { formatDateToLocal } from "../services/localTimeConverterService";
 
-const formatDateToLocal = (isoDate: string) => {
-    const date = new Date(isoDate);
-    return date.toLocaleString(undefined, {
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-        hour: "2-digit",
-        minute: "2-digit",
-        hour12: false
-    }).replace(" ", ", ");
-};
 
 export const Animal = () => {
     const animal = useLoaderData() as IAnimalsExt;
     const fetcher = useFetcher();
+    
 
 
     const lastFedTime = animal.lastFed ? new Date(animal.lastFed).getTime() : 0;

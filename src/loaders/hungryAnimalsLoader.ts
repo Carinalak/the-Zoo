@@ -22,4 +22,5 @@ export const hungryAnimalsLoader = async (): Promise<IAnimals[]> => {
     });
 
     return hungryAnimals;
+    
 };
