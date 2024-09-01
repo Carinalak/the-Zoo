@@ -8,6 +8,7 @@ import { Animal } from "./pages/Animal";
 import { Suspense } from "react";
 import { Spinner } from "./assets/components/Spinner";
 import { feedAnimalLoader } from "./loaders/feedAnimalLoader";
+import { hungryAnimalsLoader } from "./loaders/hungryAnimalsLoader";
 
 
 export const router = createBrowserRouter([
@@ -19,6 +20,7 @@ export const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
+                loader: hungryAnimalsLoader,
             },
             {
                 path: "/animals",

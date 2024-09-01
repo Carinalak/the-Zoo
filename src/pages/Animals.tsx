@@ -1,7 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { IAnimals } from "../models/IAnimals";
 import { handleImageError } from "../assets/components/Placeholder";
-import { getHungryWarning } from "../assets/helpers/animalHelpers";
+import { getHungryWarning } from "../helpers/animalHelpers";
 
 
 const getBackgroundColorClass = (lastFed: string | null) => {
