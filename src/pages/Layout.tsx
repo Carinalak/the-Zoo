@@ -21,6 +21,8 @@ export const Layout = () => {
         <main>
             <Outlet></Outlet>
         </main>
-        <footer></footer>
+        <footer>
+        <p>&copy; Carina Lakosil 2024</p>
+        </footer>
     </>
 }

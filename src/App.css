@@ -1,37 +1,23 @@
 
-/*
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-*/
 html {
   overflow-x: hidden;
 }
-main {
-  height: 100vh;
+body {
+  display: flex;
+  flex-direction: column;
 }
-
 header {
   position: sticky;
   top: 0;
   z-index: 100;
   background-color: white;
+  border-bottom: 1px solid black;
+}
+main {
+  flex: 1;
+}
+h1 {
+  font-size: 1.5rem;
 }
 .navigation-container {
   display: flex;
@@ -39,10 +25,8 @@ header {
   width: 100vw; 
   justify-content: space-around;
   align-items: center;
-  border: 1px solid black;
+  
 }
-
-
 ul {
   margin: 0px;
   padding: 0px;
@@ -64,30 +48,27 @@ li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 150px;
 }
-
 .home-display {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100wh;
   width: 400px;
-}
 
+}
 .animals-display {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px; 
   padding: 5px;
 }
-
 .animals-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 350px;
   width: 300px;
-  border-radius: 10px;
   background-color: pink;
   filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
   padding: 10px;
@@ -186,6 +167,17 @@ li a:hover {
 }
 .feed-time-container button:disabled {
   background-color: rgb(252, 252, 137);
+}
+
+footer {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-bottom: 0;
+  position: sticky;
+  margin: 0;
+  width: 100vw;
 }
 .not-found-container {
   display: flex;
