@@ -5,12 +5,12 @@ export const Home = () => {
         <article className="home-display">
         <div>
 
-            Detta är bara en test-text för att kolla saker...
+           <p> Välkommen till vårt Zoo! Här inne kan du mata djuren. </p>
+
+           Dessa djur är hungriga just nu:
+
         </div>
-
         </article>
-
-
 
     </section>
     
