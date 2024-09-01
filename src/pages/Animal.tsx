@@ -2,36 +2,30 @@ import { useFetcher, useLoaderData } from "react-router-dom";
 import { IAnimalsExt } from "../models/IAnimalsExt";
 import { handleImageError } from "../assets/components/Placeholder";
 import { formatDateToLocal } from "../services/localTimeConverterService";
-
+import { handleFeedAnimal } from "../services/feedAnimalService";
 
 export const Animal = () => {
     const animal = useLoaderData() as IAnimalsExt;
     const fetcher = useFetcher();
-    
+
+   // const { isButtonDisabled, remainingHours, remainingMinutes } = calculateFeedingStatus(animal.lastFed);
 
 
-    const lastFedTime = animal.lastFed ? new Date(animal.lastFed).getTime() : 0;
-    const currentTime = new Date().getTime();
-    const threeHoursInMilliseconds = 3 * 60 * 60 * 1000;
-    const isButtonDisabled = currentTime - lastFedTime < threeHoursInMilliseconds;
-
-    const timeUntilNextFeed = threeHoursInMilliseconds - (currentTime - lastFedTime);
-    const remainingHours = Math.floor(timeUntilNextFeed / (1000 * 60 * 60));
-    const remainingMinutes = Math.floor((timeUntilNextFeed % (1000 * 60 * 60)) / (1000 * 60));
-
-
+    const handleFeedAnimalClick = () => {
+        handleFeedAnimal(animal.id, fetcher);
+    };
+    /*
     const handleFeedAnimal = () => {
         if (isButtonDisabled) {
             window.alert(`Djuret är inte hungrigt än! Du kan mata ${animal.name} om ${remainingHours} timmar och ${remainingMinutes} minuter.`);
             return;
         }
 
-
         fetcher.load(`/feed-animal/${animal.id}`);
         window.alert(`Mmm vad gott! Mata ${animal.name} igen om tre timmar.`);
         window.location.reload();
     };
-/*
+
     if (!animal) {
         return <p>Inga djur hittades...</p>;
     }
@@ -58,7 +52,7 @@ export const Animal = () => {
                         <p>Senast matad: {formatDateToLocal(animal.lastFed)}</p>
                     </div>
                 )}
-                <button onClick={handleFeedAnimal} disabled={isButtonDisabled && false}>
+                <button onClick={handleFeedAnimalClick} disabled={false}>
                     Mata
                 </button>
             </section>
