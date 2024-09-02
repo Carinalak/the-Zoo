@@ -6,7 +6,6 @@ export const Layout = () => {
             <section className="navigation-container">
             <h1>The Zoo</h1>
                 <nav>
-                
                 <ul>
                     <li>
                         <NavLink to={"/"}>Hem</NavLink>
@@ -22,7 +21,7 @@ export const Layout = () => {
             <Outlet></Outlet>
         </main>
         <footer>
-        <p>&copy; Carina Lakosil 2024</p>
+            <p>&copy; Carina Lakosil 2024</p>
         </footer>
     </>
 }

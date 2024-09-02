@@ -14,14 +14,13 @@ export const Animals = () => {
     });
 
     return (
-        <> 
+        <>
             <section className="main-container">
                 <h1>Djuren</h1>
                 <article className="animals-display">
                     {animalsWithLastFed.map((animal) => (
                         <div className={`animals-container ${getBackgroundColorClass(animal.lastFed)}`} key={animal.id}>
                             <h2>{animal.name}</h2>
-
                             <Link to={`/animal/${animal.id}`}>
                                 <img
                                     src={animal.imageUrl} 
@@ -30,12 +29,9 @@ export const Animals = () => {
                                     onError={handleImageError}
                                 />
                             </Link>
-
-                            
-                                    <span className="hungry-warning">
-                                    <Link to={`/animal/${animal.id}`}>{getHungryWarning(animal.name, animal.lastFed)}</Link>
-                                    </span>
-                                    
+                            <span className="hungry-warning">
+                            <Link to={`/animal/${animal.id}`}>{getHungryWarning(animal.name, animal.lastFed)}</Link>
+                            </span>
                         </div>
                     ))}
                 </article>
