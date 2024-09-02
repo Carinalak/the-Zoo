@@ -30,12 +30,12 @@ export const Animals = () => {
                                     onError={handleImageError}
                                 />
                             </Link>
-                          
-                            {getHungryWarning(animal.name, animal.lastFed) && (
-                                <span className="hungry-warning">
-                                    {getHungryWarning(animal.name, animal.lastFed)}
-                                </span>
-                            )}
+
+                            
+                                    <span className="hungry-warning">
+                                    <Link to={`/animal/${animal.id}`}>{getHungryWarning(animal.name, animal.lastFed)}</Link>
+                                    </span>
+                                    
                         </div>
                     ))}
                 </article>

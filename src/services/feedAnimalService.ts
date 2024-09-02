@@ -29,7 +29,7 @@ export const handleFeedAnimal = async (animalId: string, fetch: Fetcher) => {
         window.alert(`Mmm vad gott! Mata djuret igen om tre timmar.`);
         window.location.reload();
     } catch (error) {
-        console.error("Failed to feed animal:", error);
+        console.error("Det gick inte att mata djuret:", error);
     }
 };
 
