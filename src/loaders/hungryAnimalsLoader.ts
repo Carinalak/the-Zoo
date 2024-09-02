@@ -18,7 +18,7 @@ export const hungryAnimalsLoader = async (): Promise<IAnimals[]> => {
         const currentTime = new Date().getTime();
         const hoursSinceFed = (currentTime - lastFedTime) / (1000 * 60 * 60);
 
-        return hoursSinceFed >= 3;
+        return hoursSinceFed >= 4;
     });
 
     return hungryAnimals;
