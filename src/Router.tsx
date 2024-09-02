@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import { Layout } from "./pages/Layout";
 import { animalLoader, animalsLoader } from "./loaders/animalLoader";
 import { Animals } from "./pages/Animals";
@@ -11,7 +11,7 @@ import { feedAnimalLoader } from "./loaders/feedAnimalLoader";
 import { hungryAnimalsLoader } from "./loaders/hungryAnimalsLoader";
 
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
     {
         path: "/",
         element: <Layout></Layout>,
