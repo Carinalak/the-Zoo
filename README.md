@@ -1,15 +1,15 @@
 
 ### Förstasidan, Här kan man se vilka djur som är hungriga just nu, och gå in på ett av dem: 
-![Hem](../the-zoo-Carinalak/src/assets/image/first.png)
+![Hem](src/assets/image/first.png)
 
 ### Välj ett av djuren. Rosa indikerar hunger, gult går att mata, men inte så hungrigt, grönt indikerar mättnad och går inte att mata:
-![Djuren](../the-zoo-Carinalak/src/assets/image/djuren.png)
+![Djuren](src/assets/image/djuren.png)
 
 ### Ett djurs sida där man kan mata det:
-![Ett djurs sida](../the-zoo-Carinalak/src/assets/image/singel.png)
+![Ett djurs sida](src/assets/image/singel.png)
 
 ### En placeholder image syns om det saknas en bild:
-![Placeholder image](../the-zoo-Carinalak/src/assets/image/placeholderImage.png)
+![Placeholder image](src/assets/image/placeholderImage.png)
 
 Den här sidan är gjord i React med TypeScript och VITE. Det var en skoluppgift som vi fick augusti 2024 när vi lärde oss React. Den går ut på att mata de djur som är hungriga genom att klicka på dem. Vi fick en adress till ett api, men djuren ska vi lagra i localStorage, och de är mätta i tre timmar efter att man klickat på dem, sen ska de bli hungriga.  
 
