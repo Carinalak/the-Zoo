@@ -1,4 +1,3 @@
-import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "./pages/Layout";
 import { animalLoader, animalsLoader } from "./loaders/animalLoader";
 import { Animals } from "./pages/Animals";
@@ -9,9 +8,10 @@ import { Suspense } from "react";
 import { Spinner } from "./assets/components/Spinner";
 import { feedAnimalLoader } from "./loaders/feedAnimalLoader";
 import { hungryAnimalsLoader } from "./loaders/hungryAnimalsLoader";
+import { createHashRouter } from "react-router-dom";
 
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
     {
         path: "/",
         element: <Layout></Layout>,
