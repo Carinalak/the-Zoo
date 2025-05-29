@@ -1,4 +1,4 @@
-import { Fetcher } from "react-router-dom";
+//import { Fetcher } from "react-router-dom";
 
 export const calculateFeedingStatus = (lastFed: string | null) => {
     const lastFedTime = lastFed ? new Date(lastFed).getTime() : 0;
@@ -17,21 +17,28 @@ export const calculateFeedingStatus = (lastFed: string | null) => {
     };
 };
 
-export const handleFeedAnimal = async (animalId: string, fetch: Fetcher) => {
-    try {
-        const { isButtonDisabled, remainingHours, remainingMinutes } = calculateFeedingStatus(localStorage.getItem(`lastFed-${animalId}`));
-        if (isButtonDisabled) {
-            window.alert(`Djuret är inte hungrigt än! Du kan mata det om ${remainingHours} timmar och ${remainingMinutes} minuter.`);
-            return;
-        }
+export const handleFeedAnimal = async (
+  animalId: string,
+  fetcher: ReturnType<typeof import("react-router-dom")["useFetcher"]>
+) => {
+  try {
+    const { isButtonDisabled, remainingHours, remainingMinutes } = calculateFeedingStatus(
+      localStorage.getItem(`lastFed-${animalId}`)
+    );
 
-        await fetch.load(`/feed-animal/${animalId}`);
-        window.alert(`Mmm vad gott! Mata djuret igen om tre timmar.`);
-        window.location.reload();
-    } catch (error) {
-        console.error("Det gick inte att mata djuret:", error);
+    if (isButtonDisabled) {
+      window.alert(`Djuret är inte hungrigt än! Du kan mata det om ${remainingHours} timmar och ${remainingMinutes} minuter.`);
+      return;
     }
+
+    fetcher.load(`/feed-animal/${animalId}`);
+    window.alert(`Mmm vad gott! Mata djuret igen om tre timmar.`);
+    window.location.reload();
+  } catch (error) {
+    console.error("Det gick inte att mata djuret:", error);
+  }
 };
+
 
 
 export const feedAnimal = (animalId: string) => {
